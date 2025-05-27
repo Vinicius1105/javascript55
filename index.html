@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula JS</title>
+    <script>
+        function Tamanho()
+        {
+            let palavra = document.getElementByid("palavra").value;
+            let tamanho = palavra.length;
+            document.getElementByid("resultado").innerHTML = tamanho;
+        }
+
+        function Trocar()
+        {
+            let frase = document.getElementByid("frase").value;
+            let fraseComTroca = frase.replace("Etec","Fatec");
+            document.getElementByid("resultado").innerHTML = frasecomtroca;
+        }
+        function Parcial()
+        {
+            let string = document.getElementById("string").value;
+            let stringParcial = string.substr(11,6);
+            document.getElementById("resultado").innerHTML = stringParcial;
+        }
+
+        function Posicao()
+        {
+            let frase = document.getElementById("posicao").value;
+            let posicaoPalavra = frase.indexOf("Praia");
+            document.getElementById("resultado").innerHTML = posicaoPalavra;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="palavra" id="palavra">
+    <button onclick="Tamanho()">Mostrar Tamanho</button><br><br>
+
+    <input type="text" name="frase" id="frase">
+    <button onclick="Trocar()">Trocar Palavra</button><br><br>
+
+    <input type="text" name="string" id="string">
+    <button onclick="Parcial()">String Parcial</button><br><br>
+
+    <input type="text" name="posicao" id="posicao">
+    <button onclick="Posicao()">Posicao Palavra</button><br><br>
+    <p id="resultado"></p>
+</body>
+</html>
